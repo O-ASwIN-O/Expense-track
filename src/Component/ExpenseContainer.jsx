@@ -11,7 +11,7 @@ function ExpenseContainer() {
     function fetchExpense()
     {
       
-          fetch('http://localhost:4000/Expense')
+          fetch('https://expense-track-1.onrender.com/Expense')
       .then(res => res.json())
       .then(data => setExpense(data))
       .catch(err => console.error('Error fetching:', err));
@@ -19,7 +19,7 @@ function ExpenseContainer() {
     }
 
     useEffect(() => {
-          fetch('http://localhost:4000/Expense')
+          fetch('https://expense-track-1.onrender.com/Expense')
       .then(res => res.json())
       .then(data => setExpense(data))
       .catch(err => console.error('Error fetching:', err));
@@ -29,7 +29,7 @@ function ExpenseContainer() {
 
 
     const addexpensedb = (title, amount) => {
-    fetch('http://localhost:4000/Expense', {
+    fetch('https://expense-track-1.onrender.com/Expense', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, amount }),
@@ -60,7 +60,7 @@ function ExpenseContainer() {
 
    async function deleteExpensedb(id){
     try{
-  const response = await fetch(`http://localhost:4000/Expense/${id}`, {
+  const response = await fetch(`https://expense-track-1.onrender.com/Expense/${id}`, {
     method: 'DELETE',
   })
   
